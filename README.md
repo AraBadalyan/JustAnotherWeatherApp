@@ -16,7 +16,7 @@ This is an sample app to showcase how to make Android project using -
 
 4. Navigateon components - navigating betwin fragments
 
-5. Retrofit - api calls
+5. Retrofit - api calls, is this case Open Weather Api (https://openweathermap.org)
 
 6. Room - pressinstens databse
 
