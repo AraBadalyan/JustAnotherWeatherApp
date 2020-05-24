@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/weatherFragment">
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.arabadalyan.openweathermap.view.fragments.weather.WeatherFragment"
+        android:label="weather_fragment"
+        tools:layout="@layout/weather_fragment" >
+        <action
+            android:id="@+id/action_weatherFragment_to_weatherDetailsFragment"
+            app:destination="@id/weatherDetailsFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.arabadalyan.openweathermap.view.fragments.weatherDetails.WeatherDetailsFragment"
+        android:label="weather_details_fragment"
+        tools:layout="@layout/weather_details_fragment" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+        <argument
+            android:name="daily"
+            app:argType="com.arabadalyan.domain.model.Daily" />
+        <action
+            android:id="@+id/action_weatherDetailsFragment_to_weatherFragment"
+            app:destination="@id/weatherFragment" />
+    </fragment>
+</navigation>
