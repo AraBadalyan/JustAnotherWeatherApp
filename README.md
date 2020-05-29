@@ -1,4 +1,4 @@
-# JustAnotherWearherApp
+# JustAnotherWeatherApp
 
 This is an sample app to showcase how to make Android project using -
 
